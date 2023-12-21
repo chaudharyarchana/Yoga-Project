@@ -1,13 +1,37 @@
+"use client"
 import Image from "next/image";
-
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import { useDispatch } from "react-redux";
+import { addItems } from "@/ReduxState/Slices/CartSlice";
+import { useSearchParams } from "next/navigation";
 
 const ProductDetails =()=>{
+    const dispatch = useDispatch()
+    const router = useRouter()
+    const searchparam = useSearchParams()
+    const item = {
+        id: searchparam.get('id'),
+        title : searchparam.get('title'),
+        img: searchparam.get('img'),
+        price: searchparam.get('price')
+    }
+    console.log(item)
+    const[status,setStatus] = useState("Add to Cart")
+    const handleClick =()=>{
+        if(status==="Add to Cart"){
+            dispatch(addItems(item))
+            setStatus("Go to Cart")
+        }else{
+            router.push('/product/cartdetail')
+        }
+    }
     return (
         <div className="sm:flex w-full">
         <div className=" w-3/4 mx-auto sm:w-1/2 mx:auto h-96 mt-5 pb-3 sm:pb-10">
         
-        <Image src="/images/img3.jpg" width={500} height={100} className=" w:full sm:w-3/4 mx-auto h-96 object-cover"/>
-        <h1 className="text-2xl font-bold  mx-auto text-gray-900 text-center">Hatha Yoga </h1>
+        <Image src={item.img} alt="image" width={500} height={100} className=" w:full sm:w-3/4 mx-auto h-96 object-cover"/>
+        <h1 className="text-2xl font-bold  mx-auto text-gray-900 text-center"> {item.title} </h1>
 
        
 
@@ -21,8 +45,8 @@ const ProductDetails =()=>{
       </div>
 
       <div className=" w-full flex sm:block sm:w-3/4 sm:mx-auto justify-around">
-            <h1 className=" text-xl mt-5 font-bold"> $ 499 <span className="text-gray-400 ml-5 text-m font-normal line-through">$1999</span></h1>
-            <button className=" bg-green-500 text-white px-4 mt-5 ">Add To Card</button>
+            <h1 className=" text-xl mt-5 font-bold"> $ {item.price} <span className="text-gray-400 ml-5 text-m font-normal line-through">$1999</span></h1>
+            <button className=" bg-green-500 text-white px-4 mt-5" onClick={handleClick} >{status}</button>
         </div>
     </div>
    

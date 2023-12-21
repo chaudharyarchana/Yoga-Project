@@ -1,17 +1,13 @@
-import Navbar from "@/Components/Navbar"
-import ProductDetails from "./ProductDetail"
-import Footer from "@/Components/footer"
-const Product =()=>{
-    return(
-        <>
-        <Navbar/>
-        <div className=" pt-20">
-            
-            <ProductDetails/>
-        </div>
-        <Footer/>
-        </>
-    )
-}
+import ProductDetails from "./ProductDetail";
 
-export default Product
+const Product = () => {
+  return (
+    <>
+      <div className=" pt-20">
+        <ProductDetails />
+      </div>
+    </>
+  );
+};
+
+export default Product;

@@ -1,9 +1,7 @@
 "use client"
 import Card from "@/Components/Card"
-import { AllData } from "./AllData"
+import { AllData } from "../../../public/AllData"
 
-import Navbar from "@/Components/Navbar"
-import Footer from "@/Components/footer"
 import { useState } from "react"
 
 const Classes =()=>{
@@ -30,7 +28,7 @@ const Classes =()=>{
     }
     return(
         <>
-        <Navbar/>
+       
    
         <div className="pt-20 w-full h-full ">
             <div className="w-fit mx-auto ">
@@ -44,7 +42,7 @@ const Classes =()=>{
                 ))}
             </div>
         </div>
-        <Footer/>
+       
         </>
     )
 }

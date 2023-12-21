@@ -1,3 +1,4 @@
+import Link from "next/link";
 
 
 const Footer=()=>{
@@ -9,10 +10,10 @@ const Footer=()=>{
                 <p >+91XXXXXXXXXX</p>
             </div>
             <div className=" sm:w-1/3   hidden sm:flex   flex-col">
-                <a href="/" className='pb-2 hover:underline'>Home</a>
-                <a href="/classes" className='py-2 hover:underline'>Classes</a>
-                <a href="/about" className='py-2 hover:underline'>About</a>
-                <a href="/shop" className='py-2 hover:underline'>Shop</a>
+                <Link href="/" className='pb-2 hover:underline'>Home</Link>
+                <Link href="/classes" className='py-2 hover:underline'>Classes</Link>
+                <Link href="/about" className='py-2 hover:underline'>About</Link>
+                <Link href="/shop" className='py-2 hover:underline'>Shop</Link>
                 
             </div>
             <div className="w-1/3 pl-20 hidden lg:block text-center">

@@ -1,56 +1,205 @@
-export const ShopData=[
-    
-        {
-            id:0,
-            title:"White T-shirt",
-            price:"299",
-            img:"/images/img11.jpg",
-            type:"clothes"
-        },
-        {
-                id:1,
-                title:"Yoga Mat",
-                price:"399",
-                img:"/images/img8.jpg",
-                type:"yogamat"
-        },{
-            id:2,
-            title:"Rudraksh",
-            price:"259",
-            img:"/images/img10.jpg",
-            type:"rudraksh"
-        },{
-            id:3,
-            title:"Lord Krishna",
-            price:"499",
-            img:"/images/img16.jpg",
-            type:"murti"
-        },  {
-            id:4,
-            title:"Brown T-shirt",
-            price:"299",
-            img:"/images/img11.jpg",
-            type:"clothes"
-        },
-        {
-                id:5,
-                title:"Yoga Mat",
-                price:"199",
-                img:"/images/img15.jpg",
-                type:"yogamat"
-        },{
-            id:6,
-            title:"Rudraksh",
-            price:"259",
-            img:"/images/img10.jpg",
-            type:"rudraksh"
-        },{
-            id:7,
-            title:"Lord Shiv",
-            price:"499",
-            img:"/images/img17.jpg",
-            type:"murti"
-        }
-     
-    
-]
+export const ShopData = [
+  {
+    id: 0,
+    title: "White T-shirt",
+    price: "299",
+    img: "/images/img11.jpg",
+    type: "clothes",
+  },
+  {
+    id: 1,
+    title: "Yoga Mat",
+    price: "399",
+    img: "/images/img8.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 2,
+    title: "Rudraksh",
+    price: "259",
+    img: "/images/img10.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 3,
+    title: "Lord Krishna",
+    price: "499",
+    img: "/images/img16.jpg",
+    type: "murti",
+  },
+  {
+    id: 4,
+    title: "Brown T-shirt",
+    price: "299",
+    img: "/images/img11.jpg",
+    type: "clothes",
+  },
+  {
+    id: 5,
+    title: "Yoga Mat",
+    price: "199",
+    img: "/images/img15.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 6,
+    title: "Rudraksh",
+    price: "259",
+    img: "/images/img10.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 7,
+    title: "Lord Shiv",
+    price: "499",
+    img: "/images/img17.jpg",
+    type: "murti",
+  },
+  {
+    id: 8,
+    title: "Purple T-shirt",
+    price: "349",
+    img: "/images/img2.jpg",
+    type: "clothes",
+  },
+  {
+    id: 9,
+    title: "Meditation Cushion",
+    price: "199",
+    img: "/images/img3.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 10,
+    title: "Crystal Bracelet",
+    price: "99",
+    img: "/images/img4.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 11,
+    title: "Goddess Lakshmi Murti",
+    price: "799",
+    img: "/images/img5.jpg",
+    type: "murti",
+  },
+  {
+    id: 12,
+    title: "Yellow T-shirt",
+    price: "329",
+    img: "/images/img6.jpg",
+    type: "clothes",
+  },
+  {
+    id: 13,
+    title: "Singing Bowl",
+    price: "249",
+    img: "/images/img14.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 14,
+    title: "Agate Stone Mala",
+    price: "149",
+    img: "/images/img8.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 15,
+    title: "Buddha Statue",
+    price: "899",
+    img: "/images/img9.jpg",
+    type: "murti",
+  },
+  {
+    id: 16,
+    title: "Black T-shirt",
+    price: "299",
+    img: "/images/img10.jpg",
+    type: "clothes",
+  },
+  {
+    id: 17,
+    title: "Yoga Bolster",
+    price: "349",
+    img: "/images/img11.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 18,
+    title: "Chakra Bracelet",
+    price: "79",
+    img: "/images/img14.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 19,
+    title: "Ganesha Murti",
+    price: "699",
+    img: "/images/img13.jpg",
+    type: "murti",
+  },
+  {
+    id: 20,
+    title: "Red T-shirt",
+    price: "299",
+    img: "/images/img14.jpg",
+    type: "clothes",
+  },
+  {
+    id: 21,
+    title: "Yoga Wheel",
+    price: "199",
+    img: "/images/img5.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 22,
+    title: "Tiger Eye Bracelet",
+    price: "129",
+    img: "/images/img6.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 23,
+    title: "Hanuman Murti",
+    price: "99",
+    img: "/images/img9.jpg",
+    type: "murti",
+  },
+  {
+    id: 24,
+    title: "Gray T-shirt",
+    price: "349",
+    img: "/images/img8.jpg",
+    type: "clothes",
+  },
+  {
+    id: 25,
+    title: "Mandala Tapestry",
+    price: "159",
+    img: "/images/img9.jpg",
+    type: "yogamat",
+  },
+  {
+    id: 26,
+    title: "Amethyst Bracelet",
+    price: "99",
+    img: "/images/img10.jpg",
+    type: "rudraksh",
+  },
+  {
+    id: 27,
+    title: "Sai Baba Murti",
+    price: "899",
+    img: "/images/img11.jpg",
+    type: "murti",
+  },
+  {
+    id: 28,
+    title: "Navy Blue T-shirt",
+    price: "329",
+    img: "/images/img13.jpg",
+    type: "clothes",
+  },
+];

@@ -1,19 +1,15 @@
-import Navbar from "@/Components/Navbar"
 import Hero from "@/Components/Hero"
-import Yoga from "@/Components/YogaClass/Yoga"
-import Meditation from "@/Components/Meditation/Meditaion"
-import Footer from "@/Components/footer";
-import Gallery from "@/Components/Gallery/Gallery"
+import Yoga from "@/Components/Yoga"
+import Meditation from "@/Components/Meditaion"
+import Gallery from "@/Components/Gallery"
 
 
 
 
 const page=()=>{
   return(
-   <div className="m-0 p-0">
-   <Navbar/>
+   <div className="m-0 p-0">   
    <Hero/>
-     
    <div className="flex flex-wrap w-full justify-evenly mt-10 mb-20">
    <Yoga/>
    </div>
@@ -21,8 +17,6 @@ const page=()=>{
    <Meditation/>
    </div>
    <Gallery/>
-   
-   <Footer/> 
    </div>
   
   )
