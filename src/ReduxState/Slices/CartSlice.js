@@ -1,10 +1,19 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
-const initialState = JSON.parse(
-  typeof sessionStorage !== "undefined"
-    ? sessionStorage.getItem("cartitem")
-    : "[]"
-) || [];
+// Function to check if sessionStorage is available
+const isSessionStorageAvailable = () => {
+  try {
+    return typeof sessionStorage !== "undefined" && sessionStorage !== null;
+  } catch (e) {
+    return false;
+  }
+};
+
+// Initial state with sessionStorage check
+const initialState =
+  isSessionStorageAvailable() &&
+  JSON.parse(sessionStorage.getItem("cartitem")) ||
+  [];
 
 const CartSlice = createSlice({
   name: "cart",
@@ -13,7 +22,8 @@ const CartSlice = createSlice({
     addItems: (state, action) => {
       state.push(action.payload);
 
-      if (typeof sessionStorage !== "undefined") {
+      // Check if sessionStorage is available before using it
+      if (isSessionStorageAvailable()) {
         let cartitems = JSON.stringify(current(state));
         sessionStorage.setItem("cartitem", cartitems);
       }
@@ -21,7 +31,8 @@ const CartSlice = createSlice({
     removeItems: (state, action) => {
       const newState = state.filter((item) => item.id !== action.payload);
 
-      if (typeof sessionStorage !== "undefined") {
+      // Check if sessionStorage is available before using it
+      if (isSessionStorageAvailable()) {
         const cartItems = JSON.stringify(newState);
         sessionStorage.setItem("cartitem", cartItems);
       }
@@ -32,7 +43,8 @@ const CartSlice = createSlice({
       const emptyArray = [];
       const emptyArrayString = JSON.stringify(emptyArray);
 
-      if (typeof sessionStorage !== "undefined") {
+      // Check if sessionStorage is available before using it
+      if (isSessionStorageAvailable()) {
         sessionStorage.setItem("cartitem", emptyArrayString);
       }
 
