@@ -1,33 +1,45 @@
 import { createSlice, current } from "@reduxjs/toolkit";
 
+const initialState = JSON.parse(
+  typeof sessionStorage !== "undefined"
+    ? sessionStorage.getItem("cartitem")
+    : "[]"
+) || [];
+
 const CartSlice = createSlice({
   name: "cart",
-  initialState: JSON.parse(sessionStorage.getItem("cartitem")) || [],
+  initialState: initialState,
   reducers: {
     addItems: (state, action) => {
-      
       state.push(action.payload);
-      
-      let cartitems = JSON.stringify(current(state));
-      sessionStorage.setItem("cartitem", cartitems);
-      
+
+      if (typeof sessionStorage !== "undefined") {
+        let cartitems = JSON.stringify(current(state));
+        sessionStorage.setItem("cartitem", cartitems);
+      }
     },
-    removeItems : (state,action) =>{
-      
-      const newState = state.filter((item) => item.id != action.payload);
-      const cartItems = JSON.stringify(newState);
-      sessionStorage.setItem("cartitem", cartItems);
-      return newState
+    removeItems: (state, action) => {
+      const newState = state.filter((item) => item.id !== action.payload);
+
+      if (typeof sessionStorage !== "undefined") {
+        const cartItems = JSON.stringify(newState);
+        sessionStorage.setItem("cartitem", cartItems);
+      }
+
+      return newState;
     },
-    reset : () => {
+    reset: () => {
       const emptyArray = [];
       const emptyArrayString = JSON.stringify(emptyArray);
-      sessionStorage.setItem("cartitem", emptyArrayString);
-      return emptyArray
-    }
-    
+
+      if (typeof sessionStorage !== "undefined") {
+        sessionStorage.setItem("cartitem", emptyArrayString);
+      }
+
+      return emptyArray;
+    },
   },
 });
 
 export default CartSlice.reducer;
-export const { addItems ,removeItems,reset } = CartSlice.actions;
+export const { addItems, removeItems, reset } = CartSlice.actions;
