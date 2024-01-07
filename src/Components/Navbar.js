@@ -4,10 +4,10 @@ import CartIcon from "./CartIcon";
 
 const Navbar = () => {
   return (
-    <nav className="bg-white p-4 fixed w-full z-10 shadow">
+    <nav className="bg-white p-4 fixed w-full z-10 shadow pr-10">
       <div className="container mx-auto flex items-center justify-between">
-        <div className="text-green-900 font-bold text-lg">
-          <Link href="/">Yoga Dhyana</Link>
+        <div className="text-green-600 font-bold text-xl ml-10">
+          <Link href="/">Bliss</Link>
         </div>
         <div className="lg:flex lg:items-center lg:space-x-4 hidden">
           <Link

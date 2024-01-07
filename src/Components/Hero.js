@@ -5,8 +5,8 @@ const YogaInfo = () => {
   return (
     <div className="container w-full mx-auto pt-28 flex  justify-between">
       <div className="text-center  w-1/2">
-        <h2 className=" w-3/4 mx-auto text-2xl xl:text-8xl lg:text-7xl md:text-6xl sm:text-5xl font-bold text-gray-600  ">
-          Yoga: where breath dances
+        <h2 className=" w-3/4 mx-auto text-2xl xl:text-7xl lg:text-6xl md:text-6xl sm:text-5xl font-bold text-gray-600  ">
+        Yoga is the space where flower blossoms.
         </h2>
         <Link href="/demo">
           {" "}
