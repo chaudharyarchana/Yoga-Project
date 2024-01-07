@@ -45,7 +45,7 @@ const ProductDetails =()=>{
       </div>
 
       <div className=" w-full flex sm:block sm:w-3/4 sm:mx-auto justify-around">
-            <h1 className=" text-xl mt-5 font-bold"> $ {item.price} <span className="text-gray-400 ml-5 text-m font-normal line-through">$1999</span></h1>
+            <h1 className=" text-xl mt-5 font-bold"> ₹ {item.price} <span className="text-gray-400 ml-5 text-m font-normal line-through">$1999</span></h1>
             <button className=" bg-green-500 text-white px-4 mt-5" onClick={handleClick} >{status}</button>
         </div>
     </div>

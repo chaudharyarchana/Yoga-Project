@@ -29,7 +29,7 @@ const ProductCard = ({ item }) => {
       </h1>
 
       <div className="flex justify-between">
-        <h1 className="ml-5 font-bold">$ {item.price}</h1>
+        <h1 className="ml-5 font-bold">₹ {item.price}</h1>
         <button className=" bg-green-500 text-white px-4" onClick={handleClick}>
           {add}
         </button>

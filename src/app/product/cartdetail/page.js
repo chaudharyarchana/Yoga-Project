@@ -41,7 +41,7 @@ const CartDetails = () => {
           <Image src={item.img} width={100} height={50} className="w-28 h-24 object-cover" />
           <div className="ml-10">
             <h1 className="font-semibold">{item.title}</h1>
-            <h1 className="mt-2">Price: ${item.price}</h1>
+            <h1 className="mt-2">Price: ₹{item.price}</h1>
             <button className="bg-red-500 text-white px-4 mt-3"
              onClick={()=> dispatch(removeItems(item.id))}>Remove</button>
           </div>
@@ -55,7 +55,7 @@ const CartDetails = () => {
       <h1 className='text-2xl mt-3 text-center underline font-semibold text-gray-800'>Price Details</h1>
       <h1 className='mt-10 text-center'>Number of Items : {items.length}</h1>
       <h1 className='mt-2  text-center'>Delivery Charges : Free</h1>
-      <h1 className='font-bold mt-10 text-center'>Total Amount: <span className='ml-10'>$ {amount}</span></h1>
+      <h1 className='font-bold mt-10 text-center'>Total Amount: <span className='ml-10'>₹ {amount}</span></h1>
       <div className='mx-auto w-fit'>
             <button className="bg-blue-500 text-white px-5 py-2 text-m rounded-lg mt-3 "
       onClick={handlePayment}

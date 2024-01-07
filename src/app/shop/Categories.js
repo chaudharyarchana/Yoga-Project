@@ -87,7 +87,7 @@ const Categories = () => {
                   setPrice(e.target.value);
                 }}
               />
-              <span>${price}</span>
+              <span>{price}</span>
             </div>
           </div>
         </div>
